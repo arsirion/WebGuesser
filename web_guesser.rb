@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
+num = rand(100) 
+
 get '/' do
-	num = rand(100)
-	'This random number is ' + num.to_s
+	erb :index, :locals => {:num => num}
 end
